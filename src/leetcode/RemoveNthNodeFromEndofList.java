@@ -1,5 +1,7 @@
 package leetcode;
 
+import leetcode.node.ListNode;
+
 public class RemoveNthNodeFromEndofList {
     public static ListNode removeNthFromEnd(ListNode head, int n) {
         ListNode next = head;
@@ -46,22 +48,5 @@ public class RemoveNthNodeFromEndofList {
         print(removeNthFromEnd(init(new int[]{1}), 1));
         print(removeNthFromEnd(init(new int[]{1,2}), 1));
         print(removeNthFromEnd(init(new int[]{1, 2}), 2));
-    }
-
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
     }
 }

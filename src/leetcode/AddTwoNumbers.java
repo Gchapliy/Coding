@@ -1,5 +1,7 @@
 package leetcode;
 
+import leetcode.node.ListNode;
+
 public class AddTwoNumbers {
     public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode res = new ListNode();
@@ -29,33 +31,7 @@ public class AddTwoNumbers {
         return first;
     }
 
-    private static class ListNode {
-        int val;
-        ListNode next;
 
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-
-        @Override
-        public String toString() {
-            StringBuilder sb = new StringBuilder(Integer.toString(val));
-            ListNode n = next;
-            while (n != null) {
-                sb.append("->").append(n.val);
-                n = n.next;
-            }
-            return sb.toString();
-        }
-    }
 
     public static void main(String[] args) {
         System.out.println(addTwoNumbers(
