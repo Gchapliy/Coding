@@ -17,6 +17,3 @@ public class SwapNodesInPairs {
         return temp;
     }
 }
-/*
-temp 2
- */
