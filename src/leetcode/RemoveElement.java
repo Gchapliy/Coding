@@ -10,20 +10,18 @@ public class RemoveElement {
 
     public static int removeElement(int[] nums, int val) {
         int res = 0;
-        int i = 0, j = nums.length -1;
+        int i = 0, j = nums.length - 1;
 
         while (i <= j) {
-            if(nums[i] == val) {
+            if (nums[i] == val) {
                 while (j > i) {
-                    if(nums[j] != val) {
+                    if (nums[j] != val) {
                         nums[i] = nums[j];
-                        nums[j] = -1;
                         j--;
                         res++;
                         break;
-                    } else {
-                        j--;
                     }
+                    j--;
                 }
             } else {
                 res++;
