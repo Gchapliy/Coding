@@ -16,7 +16,7 @@ public class LongestValidParenthesis {
     public static int longestValidParentheses(String s) {
         Stack<Integer> stack = new Stack<>();
         stack.push(-1);
-        int maxLength = 0;
+        int max_len = 0;
 
         for (int i = 0; i < s.length(); i++) {
             if (s.charAt(i) == '(') {
@@ -26,10 +26,11 @@ public class LongestValidParenthesis {
                 if (stack.isEmpty()) {
                     stack.push(i);
                 } else {
-                    maxLength = Math.max(maxLength, i - stack.peek());
+                    max_len = Math.max(max_len, i - stack.peek());
                 }
             }
         }
-        return maxLength;
+
+        return max_len;
     }
 }
